@@ -1,0 +1,400 @@
+/*
+Equipo 5-Zombie
+Mariana Martínez Hernández
+Astrid Oliviet Reza Chávez
+Itzayana Itzel Avila Montañez
+Linda Tovar
+*/
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Playpen+Sans:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Heebo', sans-serif;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+/* --------- Barra de navegación --------- */
+
+@media (max-width: 768px) {
+    .barra-nav {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .logo, .enlaces {
+        width: 100%;
+    }
+}
+
+/* Estilo de la barra de navegación */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 10px;
+}
+
+.barra-nav{
+    width: 100%;
+    display: flex;
+}
+
+.logo{
+    flex: 1;
+}
+
+.enlaces{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-end; 
+    padding-bottom: 0px;
+    flex: 1;
+}
+
+.enlaces li{
+    font-size: 20px;
+}
+/* Estilo del logo */
+header img {
+    margin: 10px;
+    width: 196px;
+    height: 59px;
+    align-items: center;
+}
+
+/* Estilo de la lista de navegación */
+nav {
+    display: flex;
+    align-items: center; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0; 
+    padding: 0; 
+}
+
+nav li {
+    margin: 0 10px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #1A1A1A;
+}
+
+nav a:hover {
+    color: #00B172; 
+}
+
+/* --------- Barra de navegación --------- */
+
+    
+ /*Sección carrusel*/
+
+@media (max-width: 991px) {
+    .slider {
+        width: 100%;
+    }
+}
+
+.slider-box {
+    width: 100%;
+}
+
+.slider {
+    width: 100%;
+    height: 700px;
+    margin: 0;
+}
+
+.slider-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 500%;
+    height: 800px;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li {
+    width: 100%;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.texto {
+    position: absolute;
+    text-align: center;
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: white;
+    padding: 0 25px;
+    width: 100%;
+}
+
+.texto h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.texto p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+.slider-box img {
+    width: 100%;
+    height: 700px;
+}
+
+@keyframes slide {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    100% { margin-left: -300%; }
+}
+
+/*Sección carrusel*/
+
+/* --------------- Sección What's on Spotify --------------- */
+
+/* Uso de media query */
+@media (max-width: 768px) {
+    .box {
+        flex: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Contenedores y contenido */
+
+#secc-whats{
+    background-color: #FFF;
+}
+#secc-whats h2{
+    color: #1A1A1A;
+    text-decoration: underline #00B172;
+    text-underline-position: from-font;
+    text-underline-offset: 8px;
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+}
+
+.boxes{
+    width: 100%; 
+    padding: 40px;
+    justify-content: center;
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.box{
+    padding: 10px;
+    margin: 10px;
+    max-width: 300px;
+    min-width: 300px;
+    position: relative;
+    flex: 1;
+}
+
+.box img{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.box h3{
+    color: #00b172;
+    text-align:center; 
+    padding: 10px; 
+}
+
+.box p{
+    color: #1A1A1A;
+    text-align: center;
+    font-size: 20px;   
+}
+
+/* --------------- Sección What's on Spotify --------------- */
+
+
+/* --------------- Sección verde código --------------- */
+
+/* Resolución mediante el uso de media query */
+
+@media (max-width: 768px) {
+    #cont-verde {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    #text-izq, #img-derecha {
+        width: 100%;
+    }
+}
+
+/* Contenedores y contenido */
+#cont-verde {
+    background-color: #00B172;
+    background-image: url(./images/spotify-icon-white.png);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: center;
+    display: flex;
+    padding: 30px;
+}
+
+#text-izq {
+    /*background-color: #005bb1; */
+    color: #FFF;
+    font-family:'Heebo', sans-serif;
+    line-height: 1.5;
+    flex: 1; 
+    padding: 20px;
+}
+
+#text-izq h2 {
+    line-height: 1.5;
+    font-weight: bolder;
+    border-bottom: 2px solid #FFF; 
+    display: inline;
+}
+
+#text-izq h3{
+    line-height: 1.5;
+    padding-top: 20px;
+}
+
+#img-derecha {
+    /*background-color: #d3e43d;*/
+    flex: 1; 
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    justify-content: flex-end; 
+}
+
+#img-derecha img{
+    border-radius: 15px;
+    width: 300px;
+    height: auto;
+}
+
+  
+@media (max-width: 768px) {
+    .conteiner-fluid {
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .card {
+    width: 100%;
+    }
+}
+    
+.conteiner-fluid {
+    width: 100%;
+    display: flex;
+}
+    
+.encabezados{
+    margin: 10px;
+}
+
+.encabezados h1{
+    font-weight: bold;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+        
+.encabezados h2{
+    font-size: 20px;
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+/* -------- Sección Cajas Spotify --------*/
+.card{
+    width: 100%;
+     margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+    
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,1);
+    transform: translateY(-3%);
+}
+    
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+    
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenido p{
+    line-height: 1.5;
+    color: black;
+}
+    
+.card .contenido h3{
+    font-weight: bolder;
+    margin-bottom: 15px;
+    color: rgb(28, 222, 99);
+}
+    
+.card .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: rgb(53, 217, 64);
+    border: 1px solid rgb(53, 217, 64);
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+    
+.card .contenido a:hover{
+    background: rgb(92, 209, 92);
+    color: rgb(255, 255, 255);
+}
+/* -------- Sección Cajas Spotify --------*/
